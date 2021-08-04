@@ -11,13 +11,13 @@ mytable.newkey = "新值2"
 print(mytable.newkey, mymetatable.newkey) -- nil  新值2
 
 mytable.key1 = "新值1"
-print(mytable.key1, mymetatable.newkey1) -- 新值1  nil
+print(mytable.key1, mymetatable.key1) -- 新值1  nil
 
 mytable = setmetatable({
     key1 = "value1"
 }, {
     __newindex = function(mytable, key, value)
-        rawset(mytable, key, "\"" .. value .. "\"")
+        rawset(mytable, key, "\"" .. value .. "\"") -- 设置表中指定索引的值，此函数不会调用任何元表的方法，此函数将返回table
     end
 })
 
