@@ -51,4 +51,4 @@ int luaopen_mytestlib(lua_State* L)
     return 1;
 }
 
-// g++ testlua3.cpp -o mytestlib.so -shared -fPIC -I /usr/local/include/
+// g++ lua_call_c.cpp -o mytestlib.so -shared -fPIC -I /usr/local/include/

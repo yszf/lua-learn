@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     lua_register(L, "sub2", sub2);
     lua_register(L, "l_sin", l_sin);
     //在注册完所有的C函数之后，即可在Lua的代码块中使用这些已经注册的C函数了。
-    luaL_dofile(L, "test.lua");
+    luaL_dofile(L, "c2lua.lua");
 
     //if (luaL_dostring(L,testfunc))
     // printf("Failed to invoke.\n");
